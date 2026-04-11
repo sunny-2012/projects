@@ -1,0 +1,102 @@
+{
+  "or": "or",
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Carrier Pigeons Welcome, but Email is Faster!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "company": "Company",
+    "agree": "By sending this, you agree to our",
+    "send": "Send",
+    "label": "Contact",
+    "labels": "Contacts",
+    "us": "Contact us"
+  },
+  "contacts": "Contacts",
+  "contactus": "Contact us",
+  "projects": {
+    "label": "Projects",
+    "yours": "Your project",
+    "see": "See project"
+  },
+  "services": "Services",
+  "homepage": "Homepage",
+  "tagline": "Our aim is to make your website a key driver for sales and conversions, combining engaging design, easy navigation, and strong SEO. We focus on attracting visitors and leading them effortlessly to purchase, ensuring your products shine. Your success is our mission.",
+  "hero": {
+    "title": {
+      "main": "We create",
+      "1": "websites",
+      "2": "apps",
+      "3": "designs",
+      "4": "brands"
+    },
+    "subtitle": "Our digital agency specializes in crafting captivating websites that convert and sell. Contact us for a free consultation.",
+    "or": "or",
+    "scroll": "scroll down to explore more"
+  },
+  "websites": {
+    "title": "Websites",
+    "content": "At Mintaka Studio, we specialize in crafting bespoke websites tailored to your brand's needs. Our approach combines aesthetic design with technical proficiency, ensuring your site is visually stunning, fast, and responsive across all devices."
+  },
+  "apps": {
+    "title": "Apps",
+    "content": "We deliver top-tier app development services, focusing on creating intuitive, efficient, and engaging mobile applications. Whether for iOS, Android, or cross-platform, our apps are designed to enhance user experience and drive business growth."
+  },
+  "uiux": {
+    "title": "UI/UX Design",
+    "content": "Our UI/UX design services are centered on creating user-centric interfaces that are both visually appealing and easy to navigate. We prioritize user experience, ensuring every design element aligns with the users' needs and enhances overall interaction with your digital products."
+  },
+  "seo": {
+    "title": "SEO",
+    "content": "Mintaka Studio's SEO services are designed to increase your website's visibility and drive organic traffic. We use a blend of the latest SEO strategies and techniques to improve your search engine rankings, focusing on both on-page and off-page optimization."
+  },
+  "advertising": {
+    "title": "Advertising",
+    "content": "Our advertising services aim to maximize your ROI through targeted and effective ad campaigns. We specialize in creating compelling ad content and strategies that resonate with your audience, utilizing various platforms like Google Ads and social media to enhance your brand's reach and engagement."
+  },
+  "privacy": {
+    "wip": "Work in progress",
+    "wip_content": "This page will be updated soon"
+  },
+  "faqs": {
+    "question1": "What's your favorite programming language?",
+    "answer1": "We love TypeScript for its type safety and modern features, but we're also proficient in Python, JavaScript, and Go.",
+    "question2": "Do you have a coffee machine in the office?",
+    "answer2": "Yes, and it's probably the most important piece of equipment we have! We run on caffeine and creativity.",
+    "question3": "What's your approach to rubber duck debugging?",
+    "answer3": "We have a collection of rubber ducks, each specialized in different programming languages. They're surprisingly effective at finding bugs!",
+    "question4": "How do you handle merge conflicts?",
+    "answer4": "With patience, coffee, and sometimes a bit of panic. But mostly with good Git practices and clear communication between team members.",
+    "question5": "What's your stance on tabs vs spaces?",
+    "answer5": "This is a trick question! We use EditorConfig to maintain consistency across the team. But secretly, we're team spaces.",
+    "question6": "How many monitors do your developers use?",
+    "answer6": "The correct answer is n+1, where n is the current number of monitors. There's always room for one more screen!",
+    "question7": "What's your debugging strategy?",
+    "answer7": "First we try console.log, then we try proper debugging tools, finally we stare at the code until it confesses its bugs.",
+    "question8": "How do you celebrate successful deployments?",
+    "answer8": "With a mix of relief, high-fives, and occasionally pizza. Then we immediately start worrying about the next deployment.",
+    "question9": "What's your preferred IDE theme?",
+    "answer9": "Dark theme during the day, darker theme at night. Our developers are like vampires - we avoid bright lights.",
+    "question10": "How do you name your variables?",
+    "answer10": "We follow strict naming conventions, but sometimes end up with classics like 'finalFinalVersionForReal' and 'thisWillDefinitelyWork'."
+  },
+  "faq": {
+    "otherquestions": "Other questions?"
+  },
+  "thanks": {
+    "subtitle": "Mail sent successfully",
+    "title": "Thank you",
+    "content": "We will get back to you as soon as possible"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tech, Tips, and Typo's!",
+    "gotoproject": "Go to project"
+  },
+  "footer": {
+    "newsletter": "Subscribe to",
+    "newsletter2": "our newsletter",
+    "yourmail": "Your email"
+  }
+}
