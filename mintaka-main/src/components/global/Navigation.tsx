@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -16,7 +16,6 @@ function cn(...inputs: ClassValue[]) {
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations();
-  const locale = useLocale();
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
   const logoPathRef = useRef<SVGPathElement>(null);
@@ -25,7 +24,6 @@ const Navigation: React.FC = () => {
 
   const pages = [
     { title: 'Home', url: '/' as const },
-    { title: 'Blog', url: '/blog/' as const },
     { title: t('contacts'), url: '/contact/' as const },
   ];
 
@@ -59,7 +57,6 @@ const Navigation: React.FC = () => {
         .to(menuListRef.current, {
             x: () => {
                 if (pathname === '/' || pathname === '/it/') return '9.5rem';
-                if (pathname.startsWith('/blog') || pathname.startsWith('/it/blog')) return '3.5rem';
                 return '-3.5rem';
             }
         }, '<');
@@ -143,7 +140,7 @@ const Navigation: React.FC = () => {
                         href={page.url}
                         className={cn(
                           "inline-block cursor-pointer px-1 py-[0.33rem] transition-colors",
-                          (pathname === page.url || (page.url === '/blog/' && pathname.startsWith('/blog'))) && "active"
+                          pathname === page.url && "active"
                         )}
                       >
                         <span className="menu-item-container inline-block px-4 py-1 rounded-[0.45rem] hover:bg-white active:bg-[#aaa] group">
@@ -154,19 +151,6 @@ const Navigation: React.FC = () => {
                       </Link>
                     </li>
                   ))}
-                  <li>
-                    <Link
-                      href={pathname}
-                      locale={locale === 'it' ? 'en' : 'it'}
-                      className="inline-block cursor-pointer px-1 py-[0.33rem]"
-                    >
-                      <span className="menu-item-container inline-block px-4 py-1 rounded-[0.45rem] hover:bg-white active:bg-[#aaa] group">
-                        <span className="menu-item font-semibold uppercase tracking-wide text-zinc-400 group-hover:text-black transition-colors">
-                          {locale === 'it' ? 'en' : 'it'}
-                        </span>
-                      </span>
-                    </Link>
-                  </li>
                 </ul>
               </nav>
             </div>
