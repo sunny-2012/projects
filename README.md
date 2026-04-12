@@ -40,6 +40,4 @@ On the folder run
 - [x] Localization
 - [x] Blog
 
----
 
-<p align="right"><a href="https://majestico.co" target="_blank">majestico.co</p>
