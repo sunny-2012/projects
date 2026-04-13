@@ -1,4 +1,4 @@
-# [magesticWork]
+# magesticWork
 
 > [!IMPORTANT]
 > Currently this theme only works with the premium version of GSAP, the steps to use the standard version will be available in the future.
