@@ -18,30 +18,30 @@ const entry = Astro.props;
 const { Content } = await entry.render();
 
 const seo: AstroSeoProps = {
-	title: `Project ${entry.data.title} - Majestico`,
+	title: `Project ${entry.data.title} - Magestic Work`,
 	description: entry.data.description,
-	canonical: `https://mintaka.co/work/${entry.slug}/`,
+	canonical: `https://magesticwork.co/work/${entry.slug}/`,
 	openGraph: {
 		url: entry.slug,
 		title: entry.data.title,
 		description: "{frontmatter.description}",
 		images: [
 			{
-				url: "https://mintaka.co/opengraph/social-og.jpg",
+				url: "https://magesticwork.co/opengraph/social-og.jpg",
 				width: 1200,
 				height: 630,
 				alt: "Social open graph",
 				type: "image/jpeg",
 			},
 			{
-				url: "https://mintaka.co/opengraph/twitter-og.jpg",
+				url: "https://magesticwork.co/opengraph/twitter-og.jpg",
 				width: 4096,
 				height: 4096,
 				alt: "Twitter open graph",
 				type: "image/jpeg",
 			},
-			{ url: "https://mintaka.co/opengraph/social-og.jpg" },
-			{ url: "https://mintaka.co/opengraph/twitter-og.jpg" },
+			{ url: "https://magesticwork.co/opengraph/social-og.jpg" },
+			{ url: "https://magesticwork.co/opengraph/twitter-og.jpg" },
 		],
 		site_name: "YourSitesName",
 	},

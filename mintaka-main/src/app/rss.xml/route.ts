@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   const blogPosts = await getCollection("posts", "en"); // Default to English posts for RSS
   
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mintaka.co";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://magesticwork.co";
 
   const items = blogPosts.map((post) => `
     <item>
@@ -19,7 +19,7 @@ export async function GET() {
   const rss = `<?xml version="1.0" encoding="UTF-8" ?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2000/svg">
       <channel>
-        <title>Mintaka's Blog</title>
+        <title>Magestic Work's Blog</title>
         <link>${siteUrl}/blog</link>
         <description>A humble Astronaut's guide to the stars</description>
         <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml" />

@@ -9,21 +9,21 @@ const Terms: React.FC = () => {
                     <Title title="Terms" subtitle="Last updated January 1, 2024" className="pb-10 pt-20 uppercase" />
                 </div>
                 <div className="prose prose-slate max-w-none mt-12 lg:mt-24">
-                    <h2 id="description-all-the-terms-that-you-agree-to-when-you-sign-up-for-a-Majestico-product-">
-                        All the terms that you agree to when you sign up for a Majestico product.
+                    <h2 id="description-all-the-terms-that-you-agree-to-when-you-sign-up-for-a-Magestic Work-product-">
+                        All the terms that you agree to when you sign up for a Magestic Work product.
                     </h2>
 
                     <p>
-                        From everyone at Mintaka, thank you for using our products! We build them to help you do your best work. There are millions of people
-                        using Mintaka products every day. Because we don't know every one of our customers personally, we have to put in place some Terms of
+                        From everyone at Magestic Work, thank you for using our products! We build them to help you do your best work. There are millions of people
+                        using Magestic Work products every day. Because we don't know every one of our customers personally, we have to put in place some Terms of
                         Service to help keep the ship afloat.
                     </p>
                     <p>
-                        When we say "Company", "we", "our", or "us" in this document, we are referring to Mintaka, a leading agency in [industry/field]. We
+                        When we say "Company", "we", "our", or "us" in this document, we are referring to Magestic Work, a leading agency in [industry/field]. We
                         specialize in [brief description of services and products].
                     </p>
                     <p>
-                        When we say "Services", we mean our websites, including [www.mintaka.com], and any product created and maintained by Mintaka, such as
+                        When we say "Services", we mean our websites, including [www.magesticwork.com], and any product created and maintained by Magestic Work, such as
                         [list specific services or products].
                     </p>
                     <p>
@@ -33,7 +33,7 @@ const Terms: React.FC = () => {
 
                     <p>WIP.</p>
 
-                    <p>If you have any questions about these Terms, please contact us at [support@mintaka.it].</p>
+                    <p>If you have any questions about these Terms, please contact us at [support@magesticwork.it].</p>
                 </div>
             </div>
         </section>

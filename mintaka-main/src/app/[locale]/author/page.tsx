@@ -3,8 +3,8 @@ import Authors from '@/components/blog/Authors';
 
 export async function generateMetadata() {
   return {
-    title: "Authors - Majestico Studio: Meet Our Expert Team",
-    description: "Discover the creative minds behind Majestico Studio. Our authors are industry experts in web design, SEO, and digital marketing, sharing valuable insights.",
+    title: "Authors - Magestic Work: Meet Our Expert Team",
+    description: "Discover the creative minds behind Magestic Work. Our authors are industry experts in web design, SEO, and digital marketing, sharing valuable insights.",
   };
 }
 

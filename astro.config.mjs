@@ -13,7 +13,7 @@ export default defineConfig({
 			},
 		},
 	},
-	site: "https://mintaka.co",
+	site: "https://magesticwork.co",
 	i18n: {
 		defaultLocale: "en",
 		locales: ["en", "it"],

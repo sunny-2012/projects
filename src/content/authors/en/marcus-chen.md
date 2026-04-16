@@ -2,7 +2,7 @@
 name: Marcus Chen
 description: "Award-winning Visual Effects Supervisor and 3D Artist specializing in immersive digital experiences and virtual production"
 image:
-  source: "@assets/images/authors/mintaka.png"
+  source: "@assets/images/authors/magesticwork.png"
   alt: "Portrait of Marcus Chen"
 ---
 
