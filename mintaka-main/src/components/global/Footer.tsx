@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                     <div className="col-span-3 mt-10 lg:col-start-4">
                         <div className="relative flex flex-col overflow-hidden" />
                         <div className="relative mt-1 flex h-8 flex-col overflow-hidden">
-                            <a href="mailto:test@mintaka.co" className="block cursor-pointer overflow-hidden">test@mintaka.co</a>
+                            <a href="mailto:test@magesticwork.co" className="block cursor-pointer overflow-hidden">test@magesticwork.co</a>
                         </div>
                     </div>
                 </div>

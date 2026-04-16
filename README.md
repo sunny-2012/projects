@@ -7,16 +7,16 @@
 <a href="https://tailwindcss.com/">![Tailwind](.github/images/tailwind-icon.png)</a>
 <a href="https://gsap.com/">![Gsap](.github/images/gsap.png)</a>
 
-Mintaka is a template made with [Astro](https://astro.build), [Tailwind](https://tailwindcss.com/) and [Gsap](https://gsap.com/)
+Magestic Work is a template made with [Astro](https://astro.build), [Tailwind](https://tailwindcss.com/) and [Gsap](https://gsap.com/)
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/majesticooss/mintaka)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/majesticooss/magesticwork)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/majesticooss/mintaka)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/majesticooss/magesticwork)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/majesticooss/mintaka)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/majesticooss/magesticwork)
 
 
-### [🧪 Site preview →](https://mintaka.majestico.co)
+### [🧪 Site preview →](https://magesticwork.majestico.co)
 
 ### [🧑‍🚀 Astro website →](https://astro.build/)
 
@@ -26,7 +26,7 @@ Mintaka is a template made with [Astro](https://astro.build), [Tailwind](https:/
 
 ## Preview
 
-![Mintaka Preview](.github/images/majestico_share.gif)
+![Magestic Work Preview](.github/images/majestico_share.gif)
 
 ## 🧪 Test
 

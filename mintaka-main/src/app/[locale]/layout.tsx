@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   // const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
-    title: "Mintaka Studio",
+    title: "Magestic Work",
     description: "Web Agency Leading in Performant Web Design Solutions",
   };
 }
