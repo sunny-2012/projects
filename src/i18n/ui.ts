@@ -14,10 +14,7 @@ export const ui = {
 		projects: "Projects",
 		services: "Services",
 		homepage: "Homepage",
-<<<<<<< HEAD
-=======
 		aboutus: "About us",
->>>>>>> fd9f0c8 (udated)
 		tagline:
 			"Our aim is to make your website a key driver for sales and conversions, combining engaging design, easy navigation, and strong SEO. We focus on attracting visitors and leading them effortlessly to purchase, ensuring your products shine. Your success is our mission.",
 		"projects.yours": "Your project",
@@ -99,10 +96,7 @@ export const ui = {
 		projects: "Progetti",
 		services: "Servizi",
 		homepage: "Homepage",
-<<<<<<< HEAD
-=======
 		aboutus: "Chi siamo",
->>>>>>> fd9f0c8 (udated)
 		tagline:
 			"In nostro obbiettivo è trasformare il tuo sito web in un catalizzatore potente di vendite e conversioni, fondendo un design accattivante con una navigazione intuitiva e un SEO efficace. Puntiamo a catturare l'attenzione dei visitatori e guidarli fluidamente verso l'acquisto, assicurandoci che i tuoi prodotti spicchino. Il tuo successo è il fulcro della nostra missione.",
 		"projects.yours": "Il tuo progetto",
