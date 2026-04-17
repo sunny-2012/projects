@@ -1,0 +1,102 @@
+{
+  "or": "o",
+  "contact": {
+    "title": "Contatti",
+    "subtitle": "I piccioni viaggiatori sono i benvenuti, ma la posta elettronica è più veloce!",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "company": "Azienda",
+    "agree": "Cliccando invia accetti la nostra",
+    "send": "Invia",
+    "label": "Contattaci",
+    "labels": "Contatti",
+    "us": "Contattaci"
+  },
+  "contacts": "Contatti",
+  "contactus": "Contattaci",
+  "projects": {
+    "label": "Progetti",
+    "yours": "Il tuo progetto",
+    "see": "Visualizza progetto"
+  },
+  "services": "Servizi",
+  "homepage": "Homepage",
+  "tagline": "In nostro obbiettivo è trasformare il tuo sito web in un catalizzatore potente di vendite e conversioni, fondendo un design accattivante con una navigazione intuitiva e un SEO efficace. Puntiamo a catturare l'attenzione dei visitatori e guidarli fluidamente verso l'acquisto, assicurandoci che i tuoi prodotti spicchino. Il tuo successo è il fulcro della nostra missione.",
+  "hero": {
+    "title": {
+      "main": "Creiamo",
+      "1": "siti",
+      "2": "app",
+      "3": "design",
+      "4": "brand"
+    },
+    "subtitle": "Trasforma la tua visione in realtà con la nostra agenzia digitale. Specializzati in siti web innovativi che catturano l'attenzione e massimizzano le vendite, siamo pronti a elevare il tuo brand. Approfitta della nostra consulenza gratuita per iniziare.",
+    "or": "o",
+    "scroll": "scorri per scoprire di più"
+  },
+  "websites": {
+    "title": "Siti",
+    "content": "Da Magestic Work, siamo specializzati nella realizzazione di siti web su misura per le esigenze del tuo marchio. Il nostro approccio combina design estetico con competenza tecnica, garantendo che il tuo sito sia visivamente accattivante, veloce e reattivo su tutti i dispositivi."
+  },
+  "apps": {
+    "title": "App",
+    "content": "Offriamo servizi di sviluppo app di alto livello, concentrati sulla creazione di applicazioni mobili intuitive, efficienti e coinvolgenti. Sia per iOS, Android o piattaforme incrociate, le nostre app sono progettate per migliorare l'esperienza utente e favorire la crescita aziendale."
+  },
+  "uiux": {
+    "title": "Design UI/UX",
+    "content": "I nostri servizi di design UI/UX sono incentrati sulla creazione di interfacce centrate sull'utente che sono sia visivamente attraenti che facili da navigare. Diamo priorità all'esperienza utente, assicurando che ogni elemento di design sia in linea con le esigenze degli utenti e migliori l'interazione complessiva con i tuoi prodotti digitali."
+  },
+  "seo": {
+    "title": "SEO",
+    "content": "I servizi SEO di Magestic Work sono progettati per aumentare la visibilità del tuo sito web e generare traffico organico. Utilizziamo una combinazione delle più recenti strategie e tecniche SEO per migliorare il tuo posizionamento sui motori di ricerca, concentrando sia sull'ottimizzazione on-page che off-page."
+  },
+  "advertising": {
+    "title": "Pubblicità",
+    "content": "I nostri servizi pubblicitari mirano a massimizzare il tuo ROI attraverso campagne pubblicitarie mirate ed efficaci. Siamo specializzati nella creazione di contenuti pubblicitari avvincenti e strategie che risuonano con il tuo pubblico, utilizzando varie piattaforme come Google Ads e i social media per potenziare la portata e l'engagement del tuo marchio."
+  },
+  "privacy": {
+    "wip": "Lavori in corso",
+    "wip_content": "Questa pagina verrà aggiornata a breve"
+  },
+  "faqs": {
+    "question1": "Qual è il vostro linguaggio di programmazione preferito?",
+    "answer1": "Amiamo TypeScript per la sua sicurezza dei tipi e le sue caratteristiche moderne, ma siamo anche esperti in Python, JavaScript e Go.",
+    "question2": "Avete una macchina del caffè in ufficio?",
+    "answer2": "Sì, ed è probabilmente l'attrezzatura più importante che abbiamo! Funzioniamo a base di caffeina e creatività.",
+    "question3": "Qual è il tuo approccio alla risoluzione dei problemi con il cane di gomma?",
+    "answer3": "Abbiamo una collezione di cani di gomma, ciascuno specializzato in linguaggi di programmazione diversi. Sono efficaci sorprendentemente nel trovare i bug!",
+    "question4": "Come gestisci i conflitti di fusione?",
+    "answer4": "Con pazienza, caffè e a volte un po' di panico. But mostly con buone pratiche Git e chiara comunicazione tra i membri del team.",
+    "question5": "Qual è la tua posizione su tabs vs spazi?",
+    "answer5": "Questa è una domanda trappola! Usiamo EditorConfig per mantenere la consistenza nel team. Ma in segreto, siamo team spazi.",
+    "question6": "Quanti monitor usano i tuoi sviluppatori?",
+    "answer6": "La risposta corretta è n+1, dove n è il numero corrente di monitor. Ci sarà sempre spazio per uno schermo in più!",
+    "question7": "Qual è la tua strategia di debug?",
+    "answer7": "Prima proviamo console.log, poi proviamo strumenti di debug appropriati, infine ci fissiamo sul codice fino a quando non confessa i suoi bug.",
+    "question8": "Come festeggiamo i deployment riusciti?",
+    "answer8": "Con una miscela di sollievo, pugni, e occasionalmente pizza. Poi subito iniziamo a preoccuparci del prossimo deployment.",
+    "question9": "Qual è il tema IDE preferito?",
+    "answer9": "Tema scuro durante il giorno, tema più scuro di notte. I nostri sviluppatori sono come vampiri - evitiamo luci forti.",
+    "question10": "Come chiami le tue variabili?",
+    "answer10": "Seguiamo convenzioni di denominazione rigorose, ma a volte ci ritroviamo con classici come 'finalFinalVersionForReal' and 'thisWillDefinitelyWork'."
+  },
+  "faq": {
+    "otherquestions": "Altre domande?"
+  },
+  "thanks": {
+    "subtitle": "Mail inviata con successo",
+    "title": "Grazie",
+    "content": "Ti risponeremo il prima possibile"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tecnologia, consigli e refusi!",
+    "gotoproject": "Vai al progetto"
+  },
+  "footer": {
+    "newsletter": "Iscriviti alla",
+    "newsletter2": "newsletter",
+    "yourmail": "La tua email"
+  }
+}

@@ -1,0 +1,90 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { AstroSeoProps } from "@astrolib/seo";
+
+const seo: AstroSeoProps = {
+	title: "Chi siamo - Magestic Work",
+	description:
+		"Scopri Magestic Work, il nostro team, i nostri valori e come realizziamo siti web belli e performanti per aziende moderne.",
+	canonical: "https://magesticwork.co/it/about/",
+};
+---
+
+<BaseLayout seo={seo}>
+	<section class="mx-auto max-w-6xl px-6 py-20 lg:px-0">
+		<div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+			<div class="space-y-8">
+				<span class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700">
+					<span class="h-2.5 w-2.5 rounded-full bg-blue-600"></span>
+					Chi siamo
+				</span>
+				<h1 class="text-5xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl">
+					Realizziamo siti web eleganti, veloci e progettati per far crescere il tuo business.
+				</h1>
+				<p class="max-w-3xl text-lg leading-8 text-zinc-600">
+					Magestic Work è un'agenzia digitale che fonde design, sviluppo e SEO per creare esperienze online efficaci. Ogni sito nasce per essere visibile, rapido e convincente.
+				</p>
+				<div class="flex flex-wrap gap-4">
+					<a href="/it/contact/" class="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-700">
+						Contattaci
+					</a>
+					<a href="/it/services/" class="inline-flex items-center justify-center rounded-full border border-zinc-200 px-6 py-3 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-100">
+						I nostri servizi
+					</a>
+				</div>
+			</div>
+
+			<div class="rounded-[2rem] bg-gradient-to-br from-slate-900 via-blue-900 to-violet-900 p-10 text-white shadow-2xl ring-1 ring-white/10">
+				<div class="space-y-6">
+					<p class="text-sm uppercase tracking-[0.35em] text-blue-200">Progettato per risultati</p>
+					<h2 class="text-3xl font-semibold">Un approccio orientato alla crescita per il web moderno</h2>
+					<p class="text-zinc-200">
+						Unisciemo storytelling di marca, ottimizzazione delle prestazioni e struttura SEO robusta, così il tuo sito vende e cresce fin dal primo giorno.
+					</p>
+					<div class="grid gap-4 sm:grid-cols-2">
+						<div class="rounded-3xl bg-white/10 p-5">
+							<p class="text-sm uppercase tracking-[0.3em] text-slate-300">Design</p>
+							<p class="mt-3 text-lg font-semibold">Interfacce distintive</p>
+						</div>
+						<div class="rounded-3xl bg-white/10 p-5">
+							<p class="text-sm uppercase tracking-[0.3em] text-slate-300">Performance</p>
+							<p class="mt-3 text-lg font-semibold">Caricamenti rapidissimi</p>
+						</div>
+						<div class="rounded-3xl bg-white/10 p-5">
+							<p class="text-sm uppercase tracking-[0.3em] text-slate-300">SEO</p>
+							<p class="mt-3 text-lg font-semibold">Struttura pensata per la ricerca</p>
+						</div>
+						<div class="rounded-3xl bg-white/10 p-5">
+							<p class="text-sm uppercase tracking-[0.3em] text-slate-300">Supporto</p>
+							<p class="mt-3 text-lg font-semibold">Collaborazione chiara</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-16 grid gap-8 lg:grid-cols-3">
+			<div class="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
+				<h2 class="mb-4 text-2xl font-semibold text-zinc-900">Cosa facciamo</h2>
+				<p class="text-zinc-600">
+					Realizziamo siti con design curato, codice veloce e contenuti pensati per l'utente, in modo che la tua azienda appaia professionale e convincente.
+				</p>
+			</div>
+			<div class="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
+				<h2 class="mb-4 text-2xl font-semibold text-zinc-900">Come lavoriamo</h2>
+				<p class="text-zinc-600">
+					Ogni progetto parte dalla strategia, prosegue con un'esecuzione rapida e termina con test e supporto al lancio per garantire performance fin da subito.
+				</p>
+			</div>
+			<div class="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
+				<h2 class="mb-4 text-2xl font-semibold text-zinc-900">Perché scegliere noi</h2>
+				<ul class="space-y-3 text-zinc-600">
+					<li>• Design su misura in linea con il tuo brand.</li>
+					<li>• Siti rapidi e responsive per ogni dispositivo.</li>
+					<li>• Struttura SEO-friendly per farti trovare facilmente.</li>
+					<li>• Processo trasparente e supporto dedicato.</li>
+				</ul>
+			</div>
+		</div>
+</section>
+</BaseLayout>

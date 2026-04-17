@@ -1,0 +1,16 @@
+---
+import TermsPage from "@/components/infopages/Terms.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { AstroSeoProps } from "@astrolib/seo";
+
+const seo: AstroSeoProps = {
+	title: "Terms of Service - Magestic Work: Understand Our Terms",
+	description:
+		"Read the Terms of Service for Magestic Work. Learn about our guidelines and your responsibilities when using our web design and SEO services.",
+	canonical: "https://magesticwork.co/terms/",
+};
+---
+
+<BaseLayout seo={seo}>
+	<TermsPage />
+</BaseLayout>
