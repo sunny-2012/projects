@@ -1,0 +1,58 @@
+'use client';
+
+import React from 'react';
+import { useTranslations } from 'next-intl';
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+interface NewsletterProps {
+  className?: string;
+}
+
+const Newsletter: React.FC<NewsletterProps> = ({ className }) => {
+  const t = useTranslations();
+
+  return (
+    <div className={cn("relative mt-8 h-20 max-w-[30rem] leading-6 lg:max-w-[35rem]", className)}>
+      <div className="origin-left-center squircle-bg-light absolute h-full w-full scale-100 transform rounded-xl bg-slate-200"></div>
+      <form className="h-full" onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="email"
+          name="EMAIL"
+          autoComplete="email"
+          placeholder={t("footer.yourmail")}
+          className="pointer-events-auto relative m-0 h-full w-full cursor-text border-0 bg-transparent px-5 py-2 text-xl font-normal not-italic outline-none placeholder:text-gray-400 focus:ring-transparent"
+        />
+        <button
+          type="submit"
+          aria-label="Send newsletter form button"
+          className="pointer-events-auto absolute right-5 top-1/2 m-0 inline-block h-8 w-8 -translate-y-1/2 scale-100 transform cursor-pointer bg-transparent p-0 text-center font-normal normal-case not-italic"
+        >
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M1.9999 11.9998C1.9999 12.552 2.44762 12.9997 2.9999 12.9997H18.9757C18.8901 13.148 18.7838 13.2876 18.657 13.4144L12.2931 19.7784C11.9025 20.1689 11.9025 20.8021 12.2931 21.1926C12.6836 21.5831 13.3168 21.5831 13.7073 21.1926L22.1926 12.7073C22.5831 12.3168 22.5831 11.6836 22.1926 11.2931L22.1924 11.293L13.7071 2.80767C13.3166 2.41715 12.6834 2.41715 12.2929 2.80767C11.9024 3.1982 11.9024 3.83136 12.2929 4.22189L18.657 10.586C18.7836 10.7126 18.8896 10.8518 18.9752 10.9998H2.9999C2.44762 10.9997 1.9999 11.4475 1.9999 11.9998Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+      </form>
+      
+      <style jsx>{`
+        .squircle-bg-light {
+          background: rgb(226 232 240 / 1);
+          --squircle-smooth: 1;
+          --squircle-radius: 10px;
+          /* mask-image: paint(squircle); */ /* This requires a Houdini paint worklet, maybe I should just use rounded-xl */
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default Newsletter;

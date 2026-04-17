@@ -1,0 +1,69 @@
+import React from 'react';
+
+export default function Facts() {
+  return (
+    <section>
+      <div className="px-8 py-12 mx-auto md:px-12 2xl:max-w-7xl lg:py-24">
+        <div className="grid grid-cols-1 gap-4 xl:grid-cols-2 items-start">
+          <div className="p-8 lg:p-20 bg-blue-700 rounded-4xl lg:rounded-5xl">
+            <div className="inline-flex items-center gap-4">
+              <div className="w-20 h-1 bg-white hidden md:block"></div>
+              <span className="text-xs font-semibold tracking-wide uppercase text-white">
+                Unmatched Excellence.
+              </span>
+            </div>
+            <p className="text-4xl mt-8 font-display lg:text-8xl font-semibold text-white">
+              Unmatched <span className="lg:block lg:text-lime-500">Excellence</span>
+            </p>
+            <p className="text-white text-base mt-8">
+              We are a collective of highly skilled digital product specialists, 
+              each bringing a unique set of talents and expertise to the table.
+              <br />
+              <br />
+              Our team is composed of individuals hailing from diverse backgrounds and
+              cultures, uniting our strengths to create exceptional digital experiences.
+              <br />
+              <br />
+              With members from all corners of the globe, we thrive on the synergy of
+              our international collaboration, drawing inspiration and innovation from
+              a multitude of perspectives.
+            </p>
+          </div>
+          <ol
+            role="list"
+            className="grid grid-cols-1 xl:grid-cols-1 md:grid-cols-3 lg:text-center items-center rounded-4xl lg:rounded-5xl gap-4 h-full p-8 lg:p-20 lg:grid-cols-2 list-none bg-lime-500"
+          >
+            <li>
+              <h3 className="text-lg lg:text-3xl tracking-wide font-semibold text-black md:mt-0 font-display">
+                Over 30 Years of Agency Experience
+              </h3>
+              <p className="mt-2 text-base text-black">
+                With over three years in operation, we've achieved a remarkable
+                track record, successfully launching projects worldwide.
+              </p>
+            </li>
+            <li>
+              <h3 className="text-lg lg:text-3xl tracking-wide font-semibold text-black md:mt-0 font-display">
+                1000+ Content Clients
+              </h3>
+              <p className="mt-2 text-base text-black">
+                We gauge our triumph by clients who repeatedly choose to
+                collaborate. More than half of our clients entrust us beyond a
+                solitary project.
+              </p>
+            </li>
+            <li>
+              <h3 className="text-lg lg:text-3xl tracking-wide font-semibold text-black md:mt-0 font-display">
+                Facilitated Fundraising of Over $20B
+              </h3>
+              <p className="mt-2 text-base text-black">
+                Our efforts have contributed to securing over $20 billion in funding
+                for pleny enterprises.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  );
+}

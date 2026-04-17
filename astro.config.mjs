@@ -6,6 +6,12 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
+<<<<<<< HEAD
+	devToolbar: {
+		enabled: false,
+	},
+=======
+>>>>>>> fd9f0c8 (udated)
 	vite: {
 		server: {
 			watch: {
