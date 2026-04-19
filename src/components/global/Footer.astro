@@ -11,27 +11,44 @@ const translatePath = useTranslatedPath(lang);
 <footer class="section min-h-screen gap-y-10 py-3 lg:gap-y-32">
 	<div class="relative flex-grow"></div>
 	<div class="relative grid grid-cols-6 gap-y-20 lg:grid-cols-12 lg:text-xl">
-		<div class="col-span-6 col-start-1 grid grid-cols-6 gap-6 lg:col-span-8">
-			<div class="col-span-2 col-start-4 flex flex-col gap-2 lg:col-span-3">
-				<a href="https://twitter.com//" target="_blank">Twitter / X</a>
-				<a href="https://www.instagram.com//" target="_blank">Instagram</a>
-				<a href="https://www.linkedin.com/" target="_blank">Linkedin</a>
-				
-			</div>
-			<div class="col-span-3 row-start-1 lg:col-span-2 lg:col-start-4 lg:row-start-auto">
-				<div class="flex flex-col gap-2">
-					<a href={translatePath("/")}>Home</a>
-					<a href={translatePath("/tags/")}>Tags</a>
-					<a href={translatePath("/contact/")}>{t("contacts")}</a>
-					<a href={translatePath("/terms/")}>Terms</a>
-					<a href={translatePath("/privacy/")}>Privacy Policy</a>
+		<div class="col-span-6 col-start-1 grid grid-cols-6 gap-x-6 gap-y-12 lg:col-span-8 lg:grid-cols-8">
+			{/* Pages Column */}
+			<div class="col-span-3 lg:col-span-2">
+				<div class="flex flex-col gap-3 text-zinc-600">
+					<p class="text-xs font-bold uppercase tracking-widest text-zinc-400">Pages</p>
+					<a href={translatePath("/")} class="hover:text-black transition-colors">Home</a>
+					<a href={translatePath("/about/")} class="hover:text-black transition-colors">About Us</a>
+					<a href={translatePath("/contact/")} class="hover:text-black transition-colors">{t("contacts")}</a>
+					<a href={translatePath("/terms/")} class="hover:text-black transition-colors">Terms</a>
+					<a href={translatePath("/privacy/")} class="hover:text-black transition-colors">Privacy Policy</a>
 				</div>
 			</div>
-			<div class="col-span-3 mt-10 lg:col-start-4">
-				<div class="relative flex flex-col overflow-hidden"></div>
-				<div class="relative mt-1 flex h-8 flex-col overflow-hidden">
-					<a href="mailto:test@magesticowork.co" class="block cursor-pointer overflow-hidden">test@magesticowork.co</a>
+
+			{/* Services Column */}
+			<div class="col-span-3 lg:col-span-2 lg:col-start-4">
+				<div class="flex flex-col gap-3">
+					<p class="text-xs font-bold uppercase tracking-widest text-zinc-500">Services</p>
+					<a href={translatePath("/services/#web-design")} class="hover:text-blue-600 transition-colors">Web Design</a>
+					<a href={translatePath("/services/#performance")} class="hover:text-blue-600 transition-colors">Performance</a>
+					<a href={translatePath("/services/#seo")} class="hover:text-blue-600 transition-colors">SEO</a>
+					<a href={translatePath("/services/#strategy")} class="hover:text-blue-600 transition-colors">Digital Strategy</a>
 				</div>
+			</div>
+
+			{/* Social Column */}
+			<div class="col-span-3 lg:col-span-2 lg:col-start-7">
+				<div class="flex flex-col gap-3">
+					<p class="text-xs font-bold uppercase tracking-widest text-zinc-500">Social</p>
+					<a href="https://twitter.com//" target="_blank" class="hover:text-blue-400 transition-colors">Twitter / X</a>
+					<a href="https://www.instagram.com//" target="_blank" class="hover:text-pink-600 transition-colors">Instagram</a>
+					<a href="https://www.linkedin.com/" target="_blank" class="hover:text-blue-700 transition-colors">Linkedin</a>
+				</div>
+			</div>
+
+			{/* Contact/Email Column */}
+			<div class="col-span-6 mt-6 lg:col-span-4 lg:col-start-1 lg:mt-12">
+				<p class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Get in touch</p>
+				<a href="mailto:test@magesticowork.co" class="text-xl font-medium hover:text-blue-600 transition-colors">test@magesticowork.co</a>
 			</div>
 		</div>
 		<div class="col-span-6 row-start-1 text-5xl leading-tight lg:col-span-4 lg:row-start-auto lg:text-6xl">

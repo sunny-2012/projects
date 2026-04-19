@@ -1,0 +1,67 @@
+---
+---
+<script type="module">
+  import { gsap } from "gsap";
+  import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+  gsap.registerPlugin(ScrollToPlugin);
+
+  const isSamePageAnchor = (link) => {
+    if (!(link instanceof HTMLAnchorElement)) return false;
+    if (!link.hash || link.hash === "#") return false;
+    if (link.target && link.target !== "_self") return false;
+    if (link.origin !== location.origin) return false;
+    return link.pathname === location.pathname;
+  };
+
+  const getTargetElement = (hash) => {
+    try {
+      return document.querySelector(hash);
+    } catch {
+      return null;
+    }
+  };
+
+  const scrollToHash = (hash) => {
+    const target = getTargetElement(hash);
+    if (!target) return;
+
+    gsap.to(window, {
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTo: { y: target, autoKill: false, offsetY: 20 },
+    });
+  };
+
+  const handleAnchorClick = (event) => {
+    const link = event.currentTarget;
+    const hash = link.hash;
+    const target = getTargetElement(hash);
+
+    if (!target) return;
+
+    event.preventDefault();
+    gsap.to(window, {
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTo: { y: target, autoKill: false, offsetY: 20 },
+      onComplete: () => {
+        history.replaceState(null, "", hash);
+      },
+    });
+  };
+
+  const initSmoothScroll = () => {
+    const links = Array.from(document.querySelectorAll("a[href*='#']")).filter(isSamePageAnchor);
+
+    links.forEach((link) => {
+      link.addEventListener("click", handleAnchorClick);
+    });
+
+    if (window.location.hash) {
+      scrollToHash(window.location.hash);
+    }
+  };
+
+  initSmoothScroll();
+</script>

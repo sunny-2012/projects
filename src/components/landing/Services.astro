@@ -40,13 +40,15 @@ const points = [
 		</div>
 		{
 			points.map(({ title, content, image }) => (
-				<div class="point flex h-screen w-full flex-col items-center justify-center gap-x-20 gap-y-12 p-16 pr-0 md:flex-row lg:gap-x-40">
+				<div class="point flex h-screen w-full flex-col items-center justify-center gap-x-20 gap-y-12 p-8 pr-0 md:flex-row md:p-16 lg:gap-x-40">
 					<div class="hidden w-full max-w-80 lg:block">
 						<Fragment set:html={image} class="" />
 					</div>
-					<article class="flex flex-col gap-14">
-						<h3 class="faq font-display text-4xl uppercase md:text-5xl lg:text-6xl">{title}</h3>
-						<p class="max-w-2xl text-lg" set:html={content} />
+					<article class="flex flex-col gap-10 lg:gap-14">
+						<div class="flex flex-col gap-6 lg:gap-8">
+							<h3 class="faq font-display text-4xl uppercase md:text-5xl lg:text-6xl">{title}</h3>
+							<p class="max-w-xl text-base lg:text-lg text-zinc-400" set:html={content} />
+						</div>
 					</article>
 				</div>
 			))
@@ -104,17 +106,18 @@ const points = [
 		});
 
 		points.forEach(function (elem, i) {
+			const htmlElem = elem as HTMLElement;
 			gsap.set(elem, { position: "absolute", top: 0 });
 
 			// https://codepen.io/zank/pen/oNVjYMM?editors=0010
 			tl.to(indicators[i], { backgroundColor: "white", duration: 0.25 }, i);
-			tl.from((elem as HTMLElement).querySelector("svg"), { autoAlpha: 0 }, i);
-			tl.from((elem as HTMLElement).querySelector("article"), { autoAlpha: 0, translateY: 100 }, i);
+			tl.from(htmlElem.querySelector("svg"), { autoAlpha: 0 }, i);
+			tl.from(htmlElem.querySelector("article"), { autoAlpha: 0, translateY: 100 }, i);
 
 			if (i != points.length - 1) {
 				tl.to(indicators[i], { backgroundColor: "#333333", duration: 0.25 }, i + 0.75);
-				tl.to((elem as HTMLElement).querySelector("article"), { autoAlpha: 0, translateY: -100 }, i + 0.75);
-				tl.to((elem as HTMLElement).querySelector("svg"), { autoAlpha: 0 }, i + 0.75);
+				tl.to(htmlElem.querySelector("article"), { autoAlpha: 0, translateY: -100 }, i + 0.75);
+				tl.to(htmlElem.querySelector("svg"), { autoAlpha: 0 }, i + 0.75);
 			}
 		});
 	}
