@@ -1,19 +1,41 @@
 {
-	"extends": "astro/tsconfigs/strict",
-	"compilerOptions": {
-		"strictNullChecks": true,
-		"baseUrl": "src",
-		"paths": {
-			"@/*": ["*"],
-			"@lib/*": ["lib/*"],
-			"@components/*": ["components/*"],
-			"@layouts/*": ["layouts/*"],
-			"@styles/*": ["styles/*"],
-			"@utils/*": ["utils/*"],
-			"@pages/*": ["pages/*"],
-			"@assets/*": ["assets/*"],
-			"@locales/*": ["locales/*"],
-			"@i18n/*": ["i18n/*"],
-		},
-	},
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@locales/*": [
+        "locales/*"
+      ],
+      "@i18n/*": [
+        "i18n/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }

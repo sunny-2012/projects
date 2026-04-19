@@ -11,80 +11,168 @@ const seo: AstroSeoProps = {
 ---
 
 <BaseLayout seo={seo}>
-	<section class="mx-auto max-w-6xl px-6 py-20 lg:px-0">
-		<div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-			<div class="space-y-8">
-				<span class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700">
-					<span class="h-2.5 w-2.5 rounded-full bg-blue-600"></span>
-					About Magestic Work
-				</span>
-				<h1 class="text-5xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl">
-					Our digital craftsmanship turns beautiful websites into business growth.
-				</h1>
-				<p class="max-w-3xl text-lg leading-8 text-zinc-600">
-					We create elegant, fast, and conversion-focused websites for ambitious brands. Every project combines polished design, technical performance, and SEO-first structure so your site works harder from day one.
-				</p>
-				<div class="flex flex-wrap gap-4">
-					<a href="/contact/" class="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-700">
-						Contact us
-					</a>
-					<a href="/services/" class="inline-flex items-center justify-center rounded-full border border-zinc-200 px-6 py-3 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-100">
-						See our services
-					</a>
-				</div>
+	<section class="mx-auto max-w-4xl px-6 py-20 lg:px-0">
+		<div class="text-center space-y-8">
+			<h1 class="title text-4xl md:text-5xl font-bold tracking-tight text-zinc-900">
+				About Magestic Work
+			</h1>
+			<p class="description max-w-2xl mx-auto text-lg leading-8 text-zinc-600">
+				We create elegant, fast, and conversion-focused websites for ambitious brands. Every project combines polished design, technical performance, and SEO-first structure so your site works harder from day one.
+			</p>
+			<div class="buttons flex flex-wrap justify-center gap-4">
+				<a href="/contact/" class="inline-flex items-center justify-center rounded-lg bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-700">
+					Contact us
+				</a>
+				<a href="/services/" class="inline-flex items-center justify-center rounded-lg border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-100">
+					See our services
+				</a>
 			</div>
+		</div>
 
-			<div class="rounded-[2rem] bg-gradient-to-br from-slate-900 via-blue-900 to-violet-900 p-10 text-white shadow-2xl ring-1 ring-white/10">
-				<div class="space-y-6">
-					<p class="text-sm uppercase tracking-[0.35em] text-blue-200">Built for results</p>
-					<h2 class="text-3xl font-semibold">A growth-focused approach for modern websites</h2>
-					<p class="text-zinc-200">
-						We blend brand storytelling, performance optimization and strong SEO foundations so your website earns attention and converts visitors into customers.
+		<div class="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+			<div class="bottom-card text-center p-6">
+				<h3 class="text-lg font-semibold text-zinc-900 mb-2">Design</h3>
+				<p class="text-zinc-600 text-sm">Memorable interfaces</p>
+			</div>
+			<div class="bottom-card text-center p-6">
+				<h3 class="text-lg font-semibold text-zinc-900 mb-2">Performance</h3>
+				<p class="text-zinc-600 text-sm">Fast loading pages</p>
+			</div>
+			<div class="bottom-card text-center p-6">
+				<h3 class="text-lg font-semibold text-zinc-900 mb-2">SEO</h3>
+				<p class="text-zinc-600 text-sm">Structured for search</p>
+			</div>
+			<div class="bottom-card text-center p-6">
+				<h3 class="text-lg font-semibold text-zinc-900 mb-2">Support</h3>
+				<p class="text-zinc-600 text-sm">Clear collaboration</p>
+			</div>
+		</div>
+
+		<div class="mt-20 text-center">
+			<h2 class="text-2xl font-semibold text-zinc-900 mb-8">Why Choose Us</h2>
+			<div class="grid gap-6 md:grid-cols-3">
+				<div class="bottom-card p-6">
+					<h3 class="font-semibold text-zinc-900 mb-3">What we do</h3>
+					<p class="text-zinc-600 text-sm">
+						We build websites with thoughtful design, fast code, and smart content structure.
 					</p>
-					<div class="grid gap-4 sm:grid-cols-2">
-						<div class="rounded-3xl bg-white/10 p-5">
-							<p class="text-sm uppercase tracking-[0.3em] text-slate-300">Design</p>
-							<p class="mt-3 text-lg font-semibold">Memorable interfaces</p>
-						</div>
-						<div class="rounded-3xl bg-white/10 p-5">
-							<p class="text-sm uppercase tracking-[0.3em] text-slate-300">Performance</p>
-							<p class="mt-3 text-lg font-semibold">Fast loading pages</p>
-						</div>
-						<div class="rounded-3xl bg-white/10 p-5">
-							<p class="text-sm uppercase tracking-[0.3em] text-slate-300">SEO</p>
-							<p class="mt-3 text-lg font-semibold">Structured for search</p>
-						</div>
-						<div class="rounded-3xl bg-white/10 p-5">
-							<p class="text-sm uppercase tracking-[0.3em] text-slate-300">Support</p>
-							<p class="mt-3 text-lg font-semibold">Clear collaboration</p>
-						</div>
-					</div>
+				</div>
+				<div class="bottom-card p-6">
+					<h3 class="font-semibold text-zinc-900 mb-3">How we work</h3>
+					<p class="text-zinc-600 text-sm">
+						Strategy, fast execution, testing, and launch support.
+					</p>
+				</div>
+				<div class="bottom-card p-6">
+					<h3 class="font-semibold text-zinc-900 mb-3">Our values</h3>
+					<p class="text-zinc-600 text-sm">
+						Custom design, responsive development, SEO focus, transparent process.
+					</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="mt-16 grid gap-8 lg:grid-cols-3">
-			<div class="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
-				<h2 class="mb-4 text-2xl font-semibold text-zinc-900">What we do</h2>
-				<p class="text-zinc-600">
-					We build websites with thoughtful design, fast code, and smart content structure so your business looks professional and ranks well in search.
+		<div class="mt-20">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-zinc-900 mb-4">Our Story</h2>
+				<p class="text-lg text-zinc-600 max-w-3xl mx-auto">
+					Founded in 2020, Magestic Work started as a passion project by a team of designers and developers who believed that every business deserves a website that not only looks great but drives real results. What began as a small studio has grown into a trusted partner for ambitious brands worldwide.
 				</p>
 			</div>
-			<div class="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
-				<h2 class="mb-4 text-2xl font-semibold text-zinc-900">How we work</h2>
-				<p class="text-zinc-600">
-					Every project starts with strategy, moves through fast execution, and finishes with testing and launch support to ensure your website performs from day one.
-				</p>
-			</div>
-			<div class="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
-				<h2 class="mb-4 text-2xl font-semibold text-zinc-900">Why choose us</h2>
-				<ul class="space-y-3 text-zinc-600">
-					<li>• Custom design aligned with your brand.</li>
-					<li>• Fast and responsive development.</li>
-					<li>• SEO-aware structure for organic growth.</li>
-					<li>• Transparent process and reliable support.</li>
-				</ul>
+			<div class="grid gap-8 md:grid-cols-2">
+				<div class="bottom-card p-8">
+					<h3 class="text-xl font-semibold text-zinc-900 mb-4">Our Mission</h3>
+					<p class="text-zinc-600">
+						To empower businesses with digital experiences that combine stunning design, lightning-fast performance, and strategic SEO to turn visitors into loyal customers and drive sustainable growth.
+					</p>
+				</div>
+				<div class="bottom-card p-8">
+					<h3 class="text-xl font-semibold text-zinc-900 mb-4">Our Vision</h3>
+					<p class="text-zinc-600">
+						A world where every business, regardless of size, has access to professional web solutions that level the playing field and enable them to compete with industry giants.
+					</p>
+				</div>
 			</div>
 		</div>
-</section>
+
+		<div class="mt-20">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-zinc-900 mb-4">Meet Our Team</h2>
+				<p class="text-lg text-zinc-600 max-w-2xl mx-auto">
+					The creative minds behind your digital success. Our diverse team brings together expertise in design, development, and strategy.
+				</p>
+			</div>
+			<div class="grid gap-8 md:grid-cols-3">
+				<div class="bottom-card text-center p-6">
+					<div class="w-24 h-24 bg-zinc-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+						<span class="text-2xl font-bold text-zinc-600">JD</span>
+					</div>
+					<h3 class="text-lg font-semibold text-zinc-900">John Doe</h3>
+					<p class="text-sm text-zinc-600 mb-2">Founder & Lead Designer</p>
+					<p class="text-xs text-zinc-500">10+ years crafting digital experiences</p>
+				</div>
+				<div class="bottom-card text-center p-6">
+					<div class="w-24 h-24 bg-zinc-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+						<span class="text-2xl font-bold text-zinc-600">JS</span>
+					</div>
+					<h3 class="text-lg font-semibold text-zinc-900">Jane Smith</h3>
+					<p class="text-sm text-zinc-600 mb-2">Senior Developer</p>
+					<p class="text-xs text-zinc-500">Expert in modern web technologies</p>
+				</div>
+				<div class="bottom-card text-center p-6">
+					<div class="w-24 h-24 bg-zinc-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+						<span class="text-2xl font-bold text-zinc-600">MJ</span>
+					</div>
+					<h3 class="text-lg font-semibold text-zinc-900">Mike Johnson</h3>
+					<p class="text-sm text-zinc-600 mb-2">SEO Specialist</p>
+					<p class="text-xs text-zinc-500">Driving organic growth for clients</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-20 text-center">
+			<h2 class="text-3xl font-bold text-zinc-900 mb-8">Our Achievements</h2>
+			<div class="grid gap-8 md:grid-cols-4">
+				<div class="bottom-card p-6">
+					<div class="text-3xl font-bold text-zinc-900 mb-2">150+</div>
+					<p class="text-sm text-zinc-600">Projects Completed</p>
+				</div>
+				<div class="bottom-card p-6">
+					<div class="text-3xl font-bold text-zinc-900 mb-2">98%</div>
+					<p class="text-sm text-zinc-600">Client Satisfaction</p>
+				</div>
+				<div class="bottom-card p-6">
+					<div class="text-3xl font-bold text-zinc-900 mb-2">50+</div>
+					<p class="text-sm text-zinc-600">Happy Clients</p>
+				</div>
+				<div class="bottom-card p-6">
+					<div class="text-3xl font-bold text-zinc-900 mb-2">4.9/5</div>
+					<p class="text-sm text-zinc-600">Average Rating</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-20 text-center">
+			<h2 class="text-3xl font-bold text-zinc-900 mb-8">Ready to Work Together?</h2>
+			<p class="text-lg text-zinc-600 mb-8 max-w-2xl mx-auto">
+				Let's discuss how we can help bring your vision to life with a website that drives results.
+			</p>
+			<a href="/contact/" class="inline-flex items-center justify-center rounded-lg bg-zinc-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-zinc-700">
+				Start Your Project
+			</a>
+		</div>
+	</section>
+<script is:inline>
+	import { gsap } from 'gsap';
+
+	gsap.set('.title', { y: -30, opacity: 0 });
+	gsap.set('.description', { opacity: 0 });
+	gsap.set('.buttons', { y: 20, opacity: 0 });
+	gsap.set('.bottom-card', { y: 30, opacity: 0 });
+
+	gsap.to('.title', { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' });
+	gsap.to('.description', { opacity: 1, duration: 0.8, delay: 0.2, ease: 'power2.out' });
+	gsap.to('.buttons', { y: 0, opacity: 1, duration: 0.6, delay: 0.4, ease: 'power2.out' });
+	gsap.to('.bottom-card', { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.6, ease: 'power2.out' });
+</script>
 </BaseLayout>
