@@ -26,6 +26,14 @@ const Footer: React.FC = () => {
     return (
         <footer className="relative flex w-full flex-col section min-h-screen gap-y-10 py-3 lg:gap-y-32">
             <div className="relative flex-grow" />
+            
+            {/* MAGESTICWORK Display Text */}
+            <div className="mb-20 lg:mb-32">
+                <h2 className="font-display text-6xl font-extrabold uppercase sm:text-7xl md:text-8xl lg:text-9xl leading-tight tracking-wider">
+                    MAGESTICWORK
+                </h2>
+            </div>
+            
             <div className="relative grid grid-cols-6 gap-y-20 lg:grid-cols-12 lg:text-xl">
                 <div className="col-span-6 col-start-1 grid grid-cols-6 gap-6 lg:col-span-8">
                     <div className="col-span-2 col-start-4 flex flex-col gap-2 lg:col-span-3">

@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
     }, []);
 
     return (
-        <footer className="relative flex w-full flex-col section min-h-screen gap-y-10 py-3 lg:gap-y-32">
+        <footer className="relative flex w-full flex-col section min-h-screen gap-y-10 pt-3 pb-0 lg:gap-y-32">
             <div className="relative flex-grow" />
             <div className="relative grid grid-cols-6 gap-y-20 lg:grid-cols-12 lg:text-xl">
                 <div className="col-span-6 col-start-1 grid grid-cols-6 gap-6 lg:col-span-8">
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                         <a href="https://twitter.com//" target="_blank" rel="noopener noreferrer">Twitter / X</a>
                         <a href="https://www.instagram.com//" target="_blank" rel="noopener noreferrer">Instagram</a>
                         <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Linkedin</a>
-                        <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        {/* <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a> */}
                     </div>
                     <div className="col-span-3 row-start-1 lg:col-span-2 lg:col-start-4 lg:row-start-auto">
                         <div className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="relative mt-4 flex w-full items-end justify-between gap-y-4 text-sm lg:text-xl lg:font-normal">
-                <div>©2023 YOUR COMPANY</div>
+                <div>©2026 Magesticwork</div>
                 <button
                     id="go-top-button"
                     aria-label="Go to Top"
@@ -75,6 +75,11 @@ const Footer: React.FC = () => {
                     </svg>
                 </button>
             </div>
+            <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
+    <h2 className="footer-text text-[#d6d8dd]">
+        MAGESTICWORK
+    </h2>
+</div>
         </footer>
     );
 };
