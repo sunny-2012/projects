@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import type { AstroSeoProps } from "@astrolib/seo";
+import GrainyGradient from "@/components/global/GrainyGradient.astro";
 
 const seo: AstroSeoProps = {
 	title: "Our Services - Magestic Work",
@@ -10,61 +11,309 @@ const seo: AstroSeoProps = {
 ---
 
 <BaseLayout seo={seo}>
-	<section class="mx-auto max-w-6xl px-6 py-20 lg:px-0">
-		<div class="space-y-10">
-			<div class="space-y-6 text-zinc-900">
-				<p class="text-sm uppercase tracking-[0.35em] text-blue-600">Our services</p>
-				<h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl">Services crafted to make your digital product shine.</h1>
-				<p class="max-w-3xl text-lg leading-8 text-zinc-600">
-					From strategic branding and UX design to high-performance development and search optimization, we deliver digital solutions that
-					engage users and drive measurable results.
-				</p>
-			</div>
+	<GrainyGradient colorBg="#ffffff" colorA="#a78bfa" colorB="#7dd3fc" colorC="#f472b6" class="min-h-screen">
+		<section class="relative px-6 py-20 md:py-32">
+			<div class="mx-auto max-w-7xl">
+				<!-- Hero Section -->
+				<header class="mb-24 space-y-12 text-center md:mb-48">
+					<div
+						class="inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-white/50 px-6 py-2 opacity-0 backdrop-blur-sm"
+						id="hero-badge">
+						<span class="h-2 w-2 animate-pulse rounded-full bg-blue-600"></span>
+						<span class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-500">Excellence in every pixel</span>
+					</div>
+					<h1
+						class="mx-auto max-w-5xl font-display text-6xl font-black uppercase leading-[0.95] tracking-tight opacity-0 sm:text-8xl lg:text-[11rem]"
+						id="hero-title">
+						Our <br />
+						<span class="text-blue-600">Services</span>
+					</h1>
+					<p class="mx-auto max-w-2xl text-xl leading-relaxed text-zinc-500 opacity-0 md:text-2xl" id="hero-subtitle">
+						We blend high-end design with technical mastery to create digital products that command attention and drive growth.
+					</p>
+				</header>
 
-			<div class="grid gap-8 lg:grid-cols-3">
-				<div class="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
-					<h2 class="mb-4 text-2xl font-semibold text-zinc-900">Web Design</h2>
-					<p class="text-zinc-600">
-						Beautiful layouts, strong brand storytelling, and intuitive user experiences designed to convert visitors into customers.
-					</p>
-				</div>
-				<div class="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
-					<h2 class="mb-4 text-2xl font-semibold text-zinc-900">Performance</h2>
-					<p class="text-zinc-600">Fast-loading websites built with modern standards so your pages score well and keep users engaged.</p>
-				</div>
-				<div class="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
-					<h2 class="mb-4 text-2xl font-semibold text-zinc-900">SEO</h2>
-					<p class="text-zinc-600">
-						SEO-aware architecture, content planning, and technical improvements that help search engines find your brand.
-					</p>
-				</div>
-			</div>
+				<!-- Alternating Services -->
+				<div class="space-y-24 md:space-y-40">
+					<!-- Website Developing -->
+					<div class="service-row flex flex-col items-center gap-16 md:flex-row md:gap-32">
+						<div class="flex-1 space-y-10">
+							<div class="space-y-4">
+								<span class="font-mono text-sm font-bold tracking-widest text-blue-600">01 / DEVELOPMENT</span>
+								<h2 class="font-display text-5xl font-bold uppercase leading-tight tracking-tighter sm:text-7xl lg:text-8xl">
+									Website <br />Developing
+								</h2>
+							</div>
+							<p class="text-xl leading-relaxed text-zinc-500 lg:text-2xl">
+								High-performance, bespoke websites built for speed and conversion. We don't just build sites; we build your brand's
+								digital headquarters.
+							</p>
+							<div class="flex flex-wrap gap-3">
+								{
+									["Architecture", "Astro & React", "E-commerce", "Performance"].map((tag) => (
+										<span class="rounded-full border border-zinc-200 bg-white/50 px-5 py-2 text-xs font-bold uppercase text-zinc-400 backdrop-blur-sm">
+											{tag}
+										</span>
+									))
+								}
+							</div>
+						</div>
+						<div class="w-full flex-1">
+							<div
+								class="flex aspect-[4/3] items-center justify-center rounded-[3rem] border border-white bg-gradient-to-br from-blue-100 to-indigo-200 p-12 shadow-2xl shadow-blue-200/50">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="120"
+									height="120"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="0.5"
+									class="text-blue-600/30">
+									<rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
 
-			<div class="grid gap-8 lg:grid-cols-2">
-				<div class="rounded-[2rem] bg-slate-950 p-10 text-white shadow-2xl ring-1 ring-white/10">
-					<h2 class="mb-5 text-3xl font-semibold">Custom digital strategy</h2>
-					<p class="leading-8 text-zinc-300">
-						We tailor each service package around your goals, whether you're launching a new brand, growing traffic, or improving
-						conversions.
-					</p>
-					<ul class="mt-8 space-y-4 text-zinc-300">
-						<li>• Brand-led website design</li>
-						<li>• SEO-friendly structure</li>
-						<li>• Performance optimization</li>
-						<li>• Ongoing support and growth planning</li>
-					</ul>
-				</div>
-				<div class="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
-					<h2 class="mb-5 text-3xl font-semibold text-zinc-900">How we deliver</h2>
-					<div class="space-y-4 text-zinc-600">
-						<p>
-							We keep the process clear: strategy, design, development, launch, and support. Every step is focused on quality and
-							communication.
-						</p>
-						<p>The result is a website that looks professional, works quickly, and is built to grow with your business.</p>
+					<!-- App Development -->
+					<div class="service-row flex flex-col items-center gap-16 md:flex-row-reverse md:gap-32">
+						<div class="flex-1 space-y-10">
+							<div class="space-y-4">
+								<span class="font-mono text-sm font-bold tracking-widest text-purple-600">02 / MOBILITY</span>
+								<h2 class="font-display text-5xl font-bold uppercase leading-tight tracking-tighter sm:text-7xl lg:text-8xl">
+									App <br />Development
+								</h2>
+							</div>
+							<p class="text-xl leading-relaxed text-zinc-500 lg:text-2xl">
+								Native and cross-platform mobile solutions that feel intuitive and powerful. iOS and Android experiences crafted for
+								modern audiences.
+							</p>
+							<div class="flex flex-wrap gap-3">
+								{
+									["iOS & Android", "Native UI", "Fast Sync", "Scalable"].map((tag) => (
+										<span class="rounded-full border border-zinc-200 bg-white/50 px-5 py-2 text-xs font-bold uppercase text-zinc-400 backdrop-blur-sm">
+											{tag}
+										</span>
+									))
+								}
+							</div>
+						</div>
+						<div class="w-full flex-1">
+							<div
+								class="flex aspect-[4/3] items-center justify-center rounded-[3rem] border border-white bg-gradient-to-br from-purple-100 to-pink-200 p-12 shadow-2xl shadow-purple-200/50">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="120"
+									height="120"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="0.5"
+									class="text-purple-600/30">
+									<rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<!-- Analytics Dashboard -->
+					<div class="service-row flex flex-col items-center gap-16 md:flex-row md:gap-32">
+						<div class="flex-1 space-y-10">
+							<div class="space-y-4">
+								<span class="font-mono text-sm font-bold tracking-widest text-orange-600">03 / INSIGHTS</span>
+								<h2 class="font-display text-5xl font-bold uppercase leading-tight tracking-tighter sm:text-7xl lg:text-8xl">
+									Analytics <br />Dashboard
+								</h2>
+							</div>
+							<p class="text-xl leading-relaxed text-zinc-500 lg:text-2xl">
+								Turn data into strategy. We build real-time dashboards that provide actionable insights into user behavior and
+								business growth.
+							</p>
+							<div class="flex flex-wrap gap-3">
+								{
+									["Live Data", "User Tracking", "Custom KPIs", "Visuals"].map((tag) => (
+										<span class="rounded-full border border-zinc-200 bg-white/50 px-5 py-2 text-xs font-bold uppercase text-zinc-400 backdrop-blur-sm">
+											{tag}
+										</span>
+									))
+								}
+							</div>
+						</div>
+						<div class="w-full flex-1">
+							<div
+								class="flex aspect-[4/3] items-center justify-center rounded-[3rem] border border-white bg-gradient-to-br from-orange-100 to-yellow-200 p-12 shadow-2xl shadow-orange-200/50">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="120"
+									height="120"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="0.5"
+									class="text-orange-600/30">
+									<rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect
+										width="7"
+										height="9"
+										x="14"
+										y="12"
+										rx="1">
+									</rect><rect width="7" height="5" x="3" y="16" rx="1"></rect>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<!-- SEO Mastery -->
+					<div class="service-row flex flex-col items-center gap-16 md:flex-row-reverse md:gap-32">
+						<div class="flex-1 space-y-10">
+							<div class="space-y-4">
+								<span class="font-mono text-sm font-bold tracking-widest text-emerald-600">04 / VISIBILITY</span>
+								<h2 class="font-display text-5xl font-bold uppercase leading-tight tracking-tighter sm:text-7xl lg:text-8xl">
+									SEO <br />Mastery
+								</h2>
+							</div>
+							<p class="text-xl leading-relaxed text-zinc-500 lg:text-2xl">
+								Don't just exist—dominate search. We implement advanced technical SEO to ensure your brand is discovered by the right
+								audience.
+							</p>
+							<div class="flex flex-wrap gap-3">
+								{
+									["Organic Growth", "Technical SEO", "Keywords", "Authority"].map((tag) => (
+										<span class="rounded-full border border-zinc-200 bg-white/50 px-5 py-2 text-xs font-bold uppercase text-zinc-400 backdrop-blur-sm">
+											{tag}
+										</span>
+									))
+								}
+							</div>
+						</div>
+						<div class="w-full flex-1">
+							<div
+								class="flex aspect-[4/3] items-center justify-center rounded-[3rem] border border-white bg-gradient-to-br from-emerald-100 to-teal-200 p-12 shadow-2xl shadow-emerald-200/50">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="120"
+									height="120"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="0.5"
+									class="text-emerald-600/30">
+									<circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+								</svg>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<!-- FAQs -->
+				<div class="mt-24 space-y-16 md:mt-40">
+					<div class="space-y-6 text-center">
+						<h2 class="font-display text-5xl font-bold uppercase sm:text-7xl">Common <br />Questions</h2>
+					</div>
+					<div class="mx-auto max-w-4xl space-y-8">
+						{
+							[
+								{
+									q: "How long does a typical project take?",
+									a: "Most website projects take between 2-4 weeks depending on complexity. Custom web applications or complex e-commerce sites can take  3-4 weeks.",
+								},
+								{
+									q: "Do you offer ongoing maintenance?",
+									a: "Yes, we provide ongoing support, performance monitoring, and security updates to ensure your site stays fast and secure long after launch.",
+								},
+								{
+									q: "Will my site be SEO optimized?",
+									a: "Absolutely. SEO is baked into our development process from day one. We ensure proper technical structure, speed, and semantic markup.",
+								},
+								{
+									q: "Can you help with branding?",
+									a: "While our core focus is development, we partner with top-tier designers to ensure your brand's visual identity is as strong as its technical foundation.",
+								},
+							].map((faq) => (
+								<div class="space-y-4 border-b border-zinc-200 pb-8">
+									<h3 class="text-2xl font-bold uppercase tracking-tight">{faq.q}</h3>
+									<p class="text-lg leading-relaxed text-zinc-500">{faq.a}</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+
+				<!-- Footer CTA -->
+				<div class="mt-40 flex flex-col items-center space-y-12 text-center md:mt-48">
+					<h2 class="font-display text-6xl font-black uppercase tracking-tight sm:text-8xl lg:text-[10rem]">
+						Let's <br />
+						<span class="italic text-zinc-300">Work</span>
+					</h2>
+					<a
+						href="/contact/"
+						class="group relative inline-flex items-center gap-4 rounded-full bg-zinc-950 px-12 py-6 text-xl font-bold text-white transition-all hover:scale-105 active:scale-95">
+						Get a Free Consultation
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="transition-transform group-hover:translate-x-1">
+							<path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+						</svg>
+					</a>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</GrainyGradient>
 </BaseLayout>
+
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	function init() {
+		// Hero Animations
+		gsap.to("#hero-badge", { opacity: 1, y: -20, duration: 1, ease: "power4.out" });
+		gsap.to("#hero-title", { opacity: 1, y: -20, duration: 1, delay: 0.2, ease: "power4.out" });
+		gsap.to("#hero-subtitle", { opacity: 1, y: -20, duration: 1, delay: 0.4, ease: "power4.out" });
+
+		// Staggered Row Entry & Parallax
+		const rows = gsap.utils.toArray(".service-row");
+		rows.forEach((row: any) => {
+			const text = row.querySelector(".flex-1:first-child");
+			const media = row.querySelector(".flex-1:last-child");
+
+			gsap.from(row, {
+				scrollTrigger: {
+					trigger: row,
+					start: "top 85%",
+					toggleActions: "play none none reverse",
+				},
+				opacity: 0,
+				y: 80,
+				duration: 1.5,
+				ease: "expo.out",
+			});
+
+			// Parallax Scrub
+			gsap.to(media, {
+				scrollTrigger: {
+					trigger: row,
+					start: "top bottom",
+					end: "bottom top",
+					scrub: true,
+				},
+				y: -50,
+				ease: "none",
+			});
+		});
+	}
+
+	document.addEventListener("DOMContentLoaded", init);
+	document.addEventListener("astro:page-load", init);
+</script>
