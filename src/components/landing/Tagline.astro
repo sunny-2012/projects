@@ -9,11 +9,11 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <!-- The best thing? It's all in one -->
-<div id="smooth-wrapper" class:list={["section tagline-section relative bg-zinc-900 text-white py-24 md:py-40", className]}>
-	<div class="tagline-arrows absolute hidden md:block md:left-[2vw] md:top-[2vh] lg:left-[5vw] lg:top-[5vh]">
+<div id="smooth-wrapper" class:list={["section tagline-section relative bg-zinc-900 text-white py-24 md:py-40 flex flex-col items-center", className]}>
+	<div class="tagline-arrows block">
 		<svg
 			stroke-linecap="round"
-			class="h-12 w-12 rotate-45 sm:h-32 sm:w-32 md:h-64 md:w-64 md:rotate-0 lg:h-[22rem] lg:w-[22rem] xl:h-[28rem] xl:w-[28rem]"
+			class="h-40 w-40 rotate-45 md:h-64 md:w-64 md:rotate-0 lg:h-[22rem] lg:w-[22rem] xl:h-[28rem] xl:w-[28rem]"
 			stroke-linejoin="round"
 			viewBox="0 0 550 330">
 			<path
@@ -60,31 +60,18 @@ const translatePath = useTranslatedPath(lang);
 
 		gsap.set(linePath, { drawSVG: 0 });
 
-		let otherQTl = gsap
+		gsap
 			.timeline({
 				scrollTrigger: {
 					trigger: ".tagline-arrows",
-					start: "center bottom",
-					end: "center center",
+					start: "top bottom",
+					end: "bottom center",
 					markers: false,
 					scrub: 1,
 				},
 			})
-			.to(
-				linePath,
-				{
-					drawSVG: "100%",
-				},
-				"<",
-			)
-			.to(
-				"#tagline-arrow",
-				{
-					opacity: 1,
-					duration: 0.1,
-				},
-				"<",
-			)
+			.to(linePath, { drawSVG: "100%" }, "<")
+			.to("#tagline-arrow", { opacity: 1, duration: 0.1 }, "<")
 			.to(
 				"#tagline-arrow",
 				{
