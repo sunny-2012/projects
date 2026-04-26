@@ -7,7 +7,7 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<div class:list={["relative mt-8 h-20 max-w-[30rem] leading-6 lg:max-w-[35rem]", className]}>
+<div class:list={["relative mt-8 h-16 max-w-[30rem] leading-6 md:h-20 lg:max-w-[35rem]", className]}>
 	<div class="origin-left-center squircle-bg-light absolute h-full w-full scale-100 transform rounded-xl bg-slate-200"></div>
 	<form class="h-full">
 		<input
@@ -15,7 +15,7 @@ const translatePath = useTranslatedPath(lang);
 			name="EMAIL"
 			autocomplete="email"
 			placeholder={t("footer.yourmail")}
-			class="pointer-events-auto relative m-0 h-full w-full cursor-text border-0 bg-transparent px-5 py-2 text-xl font-normal not-italic outline-none placeholder:text-gray-400 focus:ring-transparent"
+			class="pointer-events-auto relative m-0 h-full w-full cursor-text border-0 bg-transparent px-4 py-2 text-lg font-normal not-italic outline-none placeholder:text-gray-400 focus:ring-transparent md:px-5 md:text-xl"
 		/>
 		<button
 			type="submit"

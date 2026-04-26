@@ -44,6 +44,10 @@
 	}
 }
 
+body {
+	@apply overflow-x-hidden;
+}
+
 html {
 	scrollbar-gutter: stable;
 	@apply overflow-x-hidden bg-slate-100 text-stone-900;

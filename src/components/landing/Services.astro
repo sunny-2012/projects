@@ -29,6 +29,11 @@ const points = [
 		content: t("seo.content"),
 		image: seoSvg,
 	},
+	{
+		title: t("analytics.title"),
+		content: t("analytics.content"),
+		image: advertisingSvg,
+	},
 ];
 ---
 
@@ -40,13 +45,13 @@ const points = [
 		</div>
 		{
 			points.map(({ title, content, image }) => (
-				<div class="point flex h-screen w-full flex-col items-center justify-center gap-x-20 gap-y-12 p-8 pr-0 md:flex-row md:p-16 lg:gap-x-40">
-					<div class="hidden w-full max-w-80 lg:block">
+				<div class="point flex h-screen w-full flex-col items-center justify-center gap-x-20 gap-y-12 p-6 md:flex-row md:p-16 lg:gap-x-40">
+					<div class="hidden w-full max-w-72 lg:block">
 						<Fragment set:html={image} class="" />
 					</div>
 					<article class="flex flex-col gap-10 lg:gap-14">
 						<div class="flex flex-col gap-6 lg:gap-8">
-							<h3 class="faq font-display text-4xl uppercase md:text-5xl lg:text-6xl">{title}</h3>
+							<h3 class="faq font-display text-2xl uppercase sm:text-3xl md:text-4xl lg:text-6xl">{title}</h3>
 							<p class="max-w-xl text-base lg:text-lg text-zinc-400" set:html={content} />
 						</div>
 					</article>
@@ -95,7 +100,7 @@ const points = [
 				id: "pinning",
 				markers: false,
 				snap: {
-					snapTo: [0, 0.25, 0.5, 0.7, 0.9], // snap to the closest label in the timeline
+					snapTo: [0, 0.33, 0.66, 1], // snap to the closest label in the timeline
 					duration: { min: 0.1, max: 0.1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
 					delay: 1, // wait 1 seconds from the last scroll event before doing the snapping
 					inertia: false,

@@ -11,28 +11,28 @@ const approaches = [
     description: "Every pixel is intentional. We build memorable interfaces that don't just look good, but drive user action and brand loyalty.",
     icon: Target,
     color: "bg-blue-500",
-    size: "col-span-2 md:col-span-1",
+    size: "col-span-1",
   },
   {
     title: "Performance First",
     description: "Speed is a feature. We optimize every script and image to ensure lightning-fast load times that keep users engaged and boost SEO rankings.",
     icon: Zap,
     color: "bg-amber-500",
-    size: "col-span-2 md:col-span-1",
+    size: "col-span-1",
   },
   {
     title: "SEO Foundation",
     description: "Built to be found. Our sites feature clean code and semantic structure, giving you a competitive edge in organic search from day metadata to site maps.",
     icon: Search,
     color: "bg-emerald-500",
-    size: "col-span-2",
+    size: "col-span-1 sm:col-span-2",
   },
   {
     title: "Reliable Support",
     description: "We're your long-term partners. From launch day to ongoing maintenance, we provide the technical support needed to keep your studio running smoothly.",
     icon: Shield,
     color: "bg-purple-500",
-    size: "col-span-2",
+    size: "col-span-1 sm:col-span-2 lg:col-span-3",
   }
 ];
 
@@ -73,7 +73,7 @@ const AboutApproach = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {approaches.map((item, i) => (
             <BentoCard key={item.title} approach={item} index={i} />
           ))}

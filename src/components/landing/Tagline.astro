@@ -9,11 +9,11 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <!-- The best thing? It's all in one -->
-<div id="smooth-wrapper" class:list={["section tagline-section relative bg-zinc-900 text-white", className]}>
-	<div class="tagline-arrows">
+<div id="smooth-wrapper" class:list={["section tagline-section relative bg-zinc-900 text-white py-24 md:py-40", className]}>
+	<div class="tagline-arrows absolute hidden md:block md:left-[2vw] md:top-[2vh] lg:left-[5vw] lg:top-[5vh]">
 		<svg
 			stroke-linecap="round"
-			class="h-[15rem] w-[15rem] rotate-45 md:w-[20rem] md:rotate-0 lg:w-[25rem]"
+			class="h-12 w-12 rotate-45 sm:h-32 sm:w-32 md:h-64 md:w-64 md:rotate-0 lg:h-[22rem] lg:w-[22rem] xl:h-[28rem] xl:w-[28rem]"
 			stroke-linejoin="round"
 			viewBox="0 0 550 330">
 			<path
@@ -28,7 +28,7 @@ const translatePath = useTranslatedPath(lang);
 		</svg>
 	</div>
 	<div class="text col-span-12 flex justify-center font-light">
-		<p id="services-tagline" class="max-w-5xl text-center text-4xl md:text-5xl lg:text-7xl">
+		<p id="services-tagline" class="max-w-5xl text-center text-lg sm:text-xl md:text-5xl lg:text-6xl">
 			{t("tagline")}
 		</p>
 	</div>
@@ -42,7 +42,7 @@ const translatePath = useTranslatedPath(lang);
 		color: transparent;
 		background-clip: text;
 		-webkit-background-clip: text;
-		line-height: 1.2;
+		line-height: 1.8;
 	}
 </style>
 

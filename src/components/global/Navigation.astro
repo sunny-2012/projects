@@ -40,7 +40,7 @@ const { pathname } = Astro.url;
 ---
 
 <header>
-	<a href={translatePath("/")} aria-label="Home" class="logo absolute z-50 flex h-[4.5rem] items-center md:h-[5.9rem]">
+	<a href={translatePath("/")} aria-label="Home" class="logo absolute z-[9999] flex h-[4.5rem] items-center md:h-[5.9rem]">
 		<svg
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -155,28 +155,61 @@ const { pathname } = Astro.url;
     </svg>
   </a>
 
-  <div data-xdata="{ open: false }" class="navigation fixed right-0 top-0 z-50" data-xbind.class="{'w-full navbar-open': open}">
-    <div class="ml-auto md:max-w-fit" data-xbind.class="{'max-w-3xl': open, 'max-w-[8rem]': !open }">
+  <!-- Mobile Full-Screen Overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 z-[9998] hidden bg-zinc-950/95 backdrop-blur-md md:hidden">
+    <div class="flex h-full flex-col items-center justify-center gap-2 px-6">
+      <nav id="mobile-nav-overlay">
+        <ul class="flex list-none flex-col items-center gap-1 text-center">
+          {
+            pages.map((page) => (
+              <li data-cursor-hover>
+                <a
+                  href={translatePath(page.url)}
+                  class={`mobile-nav-link inline-block cursor-pointer px-4 py-3 ${
+                    page.url === pathname ||
+                    page.url === pathname.replace(/^\/it|\/$/, "") ||
+                    (page.url === "/blog" && (pathname.startsWith("/blog") || pathname.startsWith("/it/blog")))
+                      ? "active"
+                      : ""
+                  }`}>
+                  <span class="menu-item-container inline-block rounded-xl">
+                    <span class="menu-item px-6 py-2 text-3xl font-semibold uppercase tracking-widest text-zinc-400">
+                      {page.title}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <a href={translatePath("/contact/")} class="mt-6 rounded-xl bg-white px-8 py-3 text-sm font-semibold uppercase tracking-widest text-zinc-900 transition hover:bg-zinc-200">
+        Contact Us
+      </a>
+    </div>
+  </div>
+
+  <div id="nav-wrapper" class="navigation fixed right-0 top-0 z-[9999] max-w-full">
+    <div id="nav-inner" class="ml-auto w-fit max-w-[calc(100vw-2rem)]">
       <div class="mx-auto w-full">
-        <div class="shadow-thick resizable nav-container squircle relative mx-auto flex w-full flex-col justify-center overflow-x-hidden bg-zinc-900 backdrop-blur-xl backdrop-filter md:flex-row-reverse">
-          
+        <div class="shadow-thick resizable nav-container squircle relative mx-auto flex flex-col justify-center overflow-x-hidden bg-zinc-900/90 backdrop-blur-xl backdrop-filter md:flex-row-reverse">
+
           <div class="flex flex-row items-center justify-end md:hidden">
-            <a class="px-3 py-[0.4rem] pl-4" href={translatePath("/contact/")} aria-label="Contact Page">
-              <Icon class="text-white" name="octicon:mail-16" width="20" data-xbind.class="{'hidden': open}" />
+            <a id="nav-mail-icon" class="px-3 py-[0.4rem] pl-4" href={translatePath("/contact/")} aria-label="Contact Page">
+              <Icon class="text-white" name="octicon:mail-16" width="20" />
             </a>
             <button
-              data-xon.click="open = !open"
-              data-xbind.style="{'padding-top': open ? '1rem' : '0.4rem'}"
+              id="mobile-menu-btn"
               aria-label="Open navbar"
               class="inline-flex items-center justify-center px-3 py-[0.4rem] pr-4 text-white hover:text-blue-300 focus:text-white focus:outline-none">
               <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                <path data-xbind.class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                <path data-xbind.class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                <path id="menu-open-icon" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <path id="menu-close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
           </div>
 
-          <nav data-xbind.class="{'flex': open, 'hidden': !open}" class="hidden flex-grow flex-col justify-center py-12 md:flex md:py-0">
+          <nav id="mobile-nav" class="hidden flex-grow flex-col justify-center py-0 md:flex md:py-0">
             <ul class="flex list-none flex-col items-end justify-center gap-2 px-2 text-center text-3xl md:flex-row md:items-center md:text-base">
               {
                 pages.map((page) => (
@@ -184,7 +217,7 @@ const { pathname } = Astro.url;
                     <a
                       href={translatePath(page.url)}
                       class={`inline-block cursor-pointer px-1 py-[0.33rem] ${
-                        page.url === pathname || 
+                        page.url === pathname ||
                         page.url === pathname.replace(/^\/it|\/$/, "") ||
                         (page.url === "/blog" && (pathname.startsWith("/blog") || pathname.startsWith("/it/blog")))
                           ? "active"
@@ -209,19 +242,19 @@ const { pathname } = Astro.url;
 
 <style>
   .navigation {
-    mix-blend-mode: difference;
+    /* Removed mix-blend-mode: difference to ensure visibility on all backgrounds */
   }
   .navigation.navbar-open {
-    mix-blend-mode: luminosity;
+    /* Removed mix-blend-mode: luminosity */
   }
   .navigation,
   .logo {
-    padding: 1rem var(--base-padding-x);
+    padding: 0.75rem 1rem;
   }
   @media (min-width: 768px) {
     .navigation,
     .logo {
-      padding: 2rem var(--base-padding-x);
+      padding: 1.5rem var(--base-padding-x);
     }
   }
   .resizable:before {
@@ -254,6 +287,38 @@ const { pathname } = Astro.url;
   nav ul:not(.collapsed) a.active .menu-item-container .menu-item {
     color: #000;
   }
+
+  /* Mobile overlay menu */
+  #mobile-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  #mobile-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  #mobile-overlay .mobile-nav-link {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s ease;
+  }
+  #mobile-overlay.open .mobile-nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #mobile-overlay.open .mobile-nav-link:nth-child(1) { transition-delay: 0.05s; }
+  #mobile-overlay.open .mobile-nav-link:nth-child(2) { transition-delay: 0.10s; }
+  #mobile-overlay.open .mobile-nav-link:nth-child(3) { transition-delay: 0.15s; }
+  #mobile-overlay.open .mobile-nav-link:nth-child(4) { transition-delay: 0.20s; }
+  #mobile-overlay .mobile-nav-link:hover .menu-item,
+  #mobile-overlay .mobile-nav-link.active .menu-item {
+    color: #fff;
+  }
+  #mobile-overlay .mobile-nav-link.active .menu-item-container {
+    background: rgba(255,255,255,0.1);
+  }
 </style>
 
 <script>
@@ -269,26 +334,69 @@ const { pathname } = Astro.url;
     .from(".logo-svg path", { drawSVG: 0 })
     .to(".logo-svg path", { fill: "#000", duration: 2 }, "<+=0.5");
 
-    // Baaki pura animation script same rakha hai
-    let isHoveringMenu = false;
-    let menuCollapsed = false;
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileOverlay = document.getElementById("mobile-overlay");
+    const menuOpenIcon = document.getElementById("menu-open-icon");
+    const menuCloseIcon = document.getElementById("menu-close-icon");
+    const mailIcon = document.getElementById("nav-mail-icon");
+
+    let menuOpen = false;
+
+    function openMenu() {
+      menuOpen = true;
+      mobileOverlay?.classList.remove("hidden");
+      // Force reflow so transition plays
+      void (mobileOverlay as HTMLElement)?.offsetHeight;
+      mobileOverlay?.classList.add("open");
+      menuOpenIcon?.classList.add("hidden");
+      menuOpenIcon?.classList.remove("inline-flex");
+      menuCloseIcon?.classList.remove("hidden");
+      menuCloseIcon?.classList.add("inline-flex");
+      mailIcon?.classList.add("hidden");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+      menuOpen = false;
+      mobileOverlay?.classList.remove("open");
+      setTimeout(() => {
+        mobileOverlay?.classList.add("hidden");
+      }, 320);
+      menuOpenIcon?.classList.remove("hidden");
+      menuOpenIcon?.classList.add("inline-flex");
+      menuCloseIcon?.classList.add("hidden");
+      menuCloseIcon?.classList.remove("inline-flex");
+      mailIcon?.classList.remove("hidden");
+      document.body.style.overflow = "";
+    }
+
+    mobileMenuBtn?.addEventListener("click", () => {
+      if (menuOpen) closeMenu(); else openMenu();
+    });
+
+    // Close overlay when a link is clicked
+    mobileOverlay?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    // Desktop collapse on scroll
     const pageLinksUl = document.querySelector("header .nav-container nav ul");
-    if (!pageLinksUl) return;
-
-    // ... (tumhara pura original script yahan same hai)
-    let menuCollapseTl = gsap.timeline({
-      defaults: { ease: "back.inOut(1.7)", duration: 0.4 },
-      paused: true,
-      onStart: () => { pageLinksUl.classList.add("collapsed"); },
-    }).to("header .nav-container", { width: 125 })
-      .to(pageLinksUl, { x: () => {
-          const pathName = window.location.pathname;
-          if (pathName === "/" || pathName === "/it/") return "9.5rem";
-          return "-3.5rem";
-        }}, "<");
-
-    // Rest of your script (mouse hover, scroll logic) same rakh sakte ho
+    if (pageLinksUl) {
+      let menuCollapseTl = gsap.timeline({
+        defaults: { ease: "back.inOut(1.7)", duration: 0.4 },
+        paused: true,
+        onStart: () => { pageLinksUl.classList.add("collapsed"); },
+      }).to("header .nav-container", { width: 125 })
+        .to(pageLinksUl, { x: () => {
+            const pathName = window.location.pathname;
+            if (pathName === "/" || pathName === "/it/") return "9.5rem";
+            return "-3.5rem";
+          }}, "<");
+    }
   }
 
+  // Ensure init runs on both initial load and subsequent page loads (Astro View Transitions)
+  document.addEventListener("DOMContentLoaded", init);
   document.addEventListener("astro:page-load", init);
 </script>
